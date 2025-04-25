@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/Glanz-Pur/static/css/main.28543301.css",
-    "main.js": "/Glanz-Pur/static/js/main.6d5d4ae9.js",
+    "main.css": "/Glanz-Pur/static/css/main.58893875.css",
+    "main.js": "/Glanz-Pur/static/js/main.cb230ecf.js",
     "static/media/slider_img_3.png": "/Glanz-Pur/static/media/slider_img_3.d1b06ba0deda7dc038b8.png",
     "static/media/slider_img_1.png": "/Glanz-Pur/static/media/slider_img_1.6726a6a1611cc8e30cd9.png",
     "static/media/slider_img_2.png": "/Glanz-Pur/static/media/slider_img_2.ddbc6ab9a4e3d7f15840.png",
@@ -13,16 +13,17 @@
     "static/media/vacuum_logo.svg": "/Glanz-Pur/static/media/vacuum_logo.7af26dc36c8dc16664c17729481fee24.svg",
     "static/media/star.svg": "/Glanz-Pur/static/media/star.71242a2934a5413bea1f720ae46b8686.svg",
     "index.html": "/Glanz-Pur/index.html",
+    "static/media/mark_logo.svg": "/Glanz-Pur/static/media/mark_logo.7f21210f48f7a4e491475e102a85666b.svg",
     "static/media/euro_logo.svg": "/Glanz-Pur/static/media/euro_logo.21ed069de486b91176fb487e3d6b6027.svg",
     "static/media/phone_logo.svg": "/Glanz-Pur/static/media/phone_logo.afbbf6b21950e87fdb1be1ab8c8db466.svg",
     "static/media/mail_logo.svg": "/Glanz-Pur/static/media/mail_logo.1992ae115761532fb7c3df1aa463f495.svg",
     "static/media/arrow_right.svg": "/Glanz-Pur/static/media/arrow_right.df8f24e1ac68d195358c28568e26b823.svg",
     "static/media/arrow_left.svg": "/Glanz-Pur/static/media/arrow_left.e99083aa69df58c372ae1d9b0f274948.svg",
-    "main.28543301.css.map": "/Glanz-Pur/static/css/main.28543301.css.map",
-    "main.6d5d4ae9.js.map": "/Glanz-Pur/static/js/main.6d5d4ae9.js.map"
+    "main.58893875.css.map": "/Glanz-Pur/static/css/main.58893875.css.map",
+    "main.cb230ecf.js.map": "/Glanz-Pur/static/js/main.cb230ecf.js.map"
   },
   "entrypoints": [
-    "static/css/main.28543301.css",
-    "static/js/main.6d5d4ae9.js"
+    "static/css/main.58893875.css",
+    "static/js/main.cb230ecf.js"
   ]
 }
