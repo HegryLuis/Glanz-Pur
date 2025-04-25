@@ -1,0 +1,93 @@
+.slider-wrap {
+  display: flex;
+  gap: 24px;
+  padding: 20px;
+  flex-wrap: wrap;
+}
+
+.main-img img {
+  width: 500px;
+  height: auto;
+  border-radius: 10px;
+}
+
+.slider-container {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+  gap: 20px;
+  text-align: left;
+  justify-content: space-between;
+}
+
+.text-block h4 {
+  font-size: 36px;
+  margin-bottom: 20px;
+}
+
+.text-block p {
+  font-size: 16px;
+  color: #555;
+}
+
+.text-paragraph {
+  padding-bottom: 10px;
+}
+
+.controls-block {
+  display: flex;
+  align-items: center;
+  justify-content: normal;
+  gap: 20px;
+}
+
+.unactive-slide {
+  display: flex;
+  gap: 16px;
+}
+
+.slide {
+  position: relative;
+  cursor: pointer;
+  text-align: center;
+  width: 200px;
+}
+
+.slide img {
+  width: 100%;
+  height: auto;
+  border-radius: 8px;
+  filter: brightness(0.6);
+  transition: filter 0.3s ease;
+}
+
+.slide span {
+  position: absolute;
+  color: #fff;
+  bottom: 10%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.controls {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  gap: 10px;
+  width: 60%;
+}
+
+.controls .btn {
+  width: 100%;
+}
+
+.indicator {
+  display: flex;
+  gap: 20px;
+}
+
+#slide-indicator {
+  font-size: 24px;
+  margin: 10px 0;
+  color: #666f86;
+}
