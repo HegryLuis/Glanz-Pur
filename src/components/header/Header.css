@@ -1,0 +1,45 @@
+header {
+  display: flex;
+  justify-content: space-between;
+  padding: 20px 0;
+}
+
+.header-content {
+  display: flex;
+  justify-content: end;
+  align-items: center;
+}
+
+.navbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 20px 40px;
+}
+
+.menu {
+  display: flex;
+  gap: 30px;
+}
+
+.menu-item {
+  position: relative;
+  cursor: pointer;
+  transition: transform 200ms ease;
+}
+
+.menu-item.active span {
+  transform: translateY(-5px);
+  display: inline-block;
+}
+
+.menu-item .dot {
+  position: absolute;
+  left: 50%;
+  transform: translate(-50%);
+  bottom: -6px;
+  width: 6px;
+  height: 6px;
+  background: #3b82f6;
+  border-radius: 50%;
+}
