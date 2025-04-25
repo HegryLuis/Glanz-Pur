@@ -81,78 +81,79 @@ const MainPage = () => {
 
   return (
     <>
-      <Header />
       <div className="container">
-        <div className="main-header">
-          <div className="main-title-block">
-            <span className="blue-text main-text">
-              Professionelle Reinigung für Ihr Zuhause und Büro. Schnell und
-              zuverlässig.
-            </span>
-            <h2 className="blue-text">Glanz Pur</h2>
-            <button className="btn">Jetzt bestellen</button>
+        <div className="wrap">
+          <div className="main-header">
+            <div className="main-title-block">
+              <span className="blue-text main-text">
+                Professionelle Reinigung für Ihr Zuhause und Büro. Schnell und
+                zuverlässig.
+              </span>
+              <h2 className="blue-text">Glanz Pur</h2>
+              <button className="btn">Jetzt bestellen</button>
 
-            <div className="contacts">
-              <div className="contact phone">
-                <LogoWrapper logo={phone_logo} />
-                <span>+41 79 123 45 67</span>
-              </div>
+              <div className="contacts">
+                <div className="contact phone">
+                  <LogoWrapper logo={phone_logo} />
+                  <span>+41 79 123 45 67</span>
+                </div>
 
-              <div className=" contact email">
-                <LogoWrapper logo={mail_logo} />
-                <span>PremReno@gmail.com</span>
+                <div className=" contact email">
+                  <LogoWrapper logo={mail_logo} />
+                  <span>PremReno@gmail.com</span>
+                </div>
               </div>
             </div>
+            <img alt="main-illustration" src={main_illustration} />
           </div>
-          <img alt="main-illustration" src={main_illustration} />
-        </div>
 
-        <div className="main-content">
-          <h2 className="blue-text">Warum wir</h2>
-          <div className="content-wrap">
-            {infoData.map((data, index) => {
-              return (
-                <InfoBlock
-                  key={index}
-                  logo={data.logo}
-                  title={data.title}
-                  text={data.text}
-                  className="content-block"
-                />
-              );
-            })}
+          <div className="main-content">
+            <h2 className="blue-text">Warum wir</h2>
+            <div className="content-wrap">
+              {infoData.map((data, index) => {
+                return (
+                  <InfoBlock
+                    key={index}
+                    logo={data.logo}
+                    title={data.title}
+                    text={data.text}
+                    className="content-block"
+                  />
+                );
+              })}
+            </div>
           </div>
-        </div>
 
-        <div className="slider-content">
-          <h2 className="blue-text">Dienstleistungen</h2>
+          <div className="slider-content">
+            <h2 className="blue-text">Dienstleistungen</h2>
 
-          <Slider data={sliderData} />
-        </div>
-
-        <div className="comment-content">
-          <h2 className="blue-text">Was die Leute über uns sagen</h2>
-
-          <div className="comment-wrap">
-            {commentData.map((data, index) => {
-              return (
-                <CommentBlock
-                  key={index}
-                  avatar={data.avatar}
-                  stars={data.stars}
-                  name={data.name}
-                  text={data.text}
-                />
-              );
-            })}
+            <Slider data={sliderData} />
           </div>
-          <div className="btns-wrap">
-            <div className="indicator">
-              <div className="comments-btn comments-back">
-                <img alt="prev" src={arrow_left} />
-              </div>
-              <div className="comments-btn comments-next">
-                <img alt="next" src={arrow_right} />
+
+          <div className="comment-content">
+            <h2 className="blue-text">Was die Leute über uns sagen</h2>
+
+            <div className="comment-wrap">
+              {commentData.map((data, index) => {
+                return (
+                  <CommentBlock
+                    key={index}
+                    avatar={data.avatar}
+                    stars={data.stars}
+                    name={data.name}
+                    text={data.text}
+                  />
+                );
+              })}
+            </div>
+            <div className="btns-wrap">
+              <div className="indicator">
+                <div className="comments-btn comments-back">
+                  <img alt="prev" src={arrow_left} />
+                </div>
+                <div className="comments-btn comments-next">
+                  <img alt="next" src={arrow_right} />
+                </div>
               </div>
             </div>
           </div>

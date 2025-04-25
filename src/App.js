@@ -1,12 +1,14 @@
 import "./App.css";
+import Footer from "./components/Footer/Footer";
+import Header from "./components/header/Header";
 import MainPage from "./pages/main-page/MainPage";
 
 function App() {
   return (
     <div className="App">
-      <div className="wrap">
-        <MainPage />
-      </div>
+      <Header />
+      <MainPage />
+      <Footer />
     </div>
   );
 }
