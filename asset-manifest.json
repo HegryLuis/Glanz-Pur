@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/Glanz-Pur/static/css/main.271503ae.css",
-    "main.js": "/Glanz-Pur/static/js/main.2449c3a9.js",
+    "main.css": "/Glanz-Pur/static/css/main.6d7344a5.css",
+    "main.js": "/Glanz-Pur/static/js/main.dd8ddae6.js",
     "static/media/slider_img_3.png": "/Glanz-Pur/static/media/slider_img_3.d1b06ba0deda7dc038b8.png",
     "static/media/slider_img_1.png": "/Glanz-Pur/static/media/slider_img_1.6726a6a1611cc8e30cd9.png",
     "static/media/slider_img_2.png": "/Glanz-Pur/static/media/slider_img_2.ddbc6ab9a4e3d7f15840.png",
@@ -15,11 +15,11 @@
     "static/media/mail_logo.svg": "/Glanz-Pur/static/media/mail_logo.1992ae115761532fb7c3df1aa463f495.svg",
     "static/media/arrow_right.svg": "/Glanz-Pur/static/media/arrow_right.df8f24e1ac68d195358c28568e26b823.svg",
     "static/media/arrow_left.svg": "/Glanz-Pur/static/media/arrow_left.e99083aa69df58c372ae1d9b0f274948.svg",
-    "main.271503ae.css.map": "/Glanz-Pur/static/css/main.271503ae.css.map",
-    "main.2449c3a9.js.map": "/Glanz-Pur/static/js/main.2449c3a9.js.map"
+    "main.6d7344a5.css.map": "/Glanz-Pur/static/css/main.6d7344a5.css.map",
+    "main.dd8ddae6.js.map": "/Glanz-Pur/static/js/main.dd8ddae6.js.map"
   },
   "entrypoints": [
-    "static/css/main.271503ae.css",
-    "static/js/main.2449c3a9.js"
+    "static/css/main.6d7344a5.css",
+    "static/js/main.dd8ddae6.js"
   ]
 }
