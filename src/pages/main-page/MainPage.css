@@ -69,3 +69,30 @@
 .comment-content h2 {
   margin-bottom: 70px;
 }
+
+.comment-wrap {
+  display: flex;
+  margin: 150px 0 50px 0;
+}
+
+.btns-wrap {
+  display: flex;
+  justify-content: center;
+}
+
+.comments-btn {
+  position: relative;
+  width: 64px;
+  height: 64px;
+  background: #d8e6fd;
+  border-radius: 50%;
+}
+
+.comments-btn img {
+  width: 18px;
+  height: auto;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}

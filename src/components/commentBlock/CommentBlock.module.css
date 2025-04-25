@@ -1,0 +1,48 @@
+.box {
+  position: relative;
+  border-radius: 10px;
+  padding: 30px 20px;
+  text-align: center;
+  max-width: 400px;
+  margin: 0 auto;
+  background: #e8eaf0;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
+  overflow: visible;
+  color: #45506b;
+}
+
+.comment_imgs {
+  width: 100%;
+  height: 60px;
+}
+
+.avatar {
+  position: absolute;
+  top: -80px;
+  left: 50%;
+  transform: translate(-50%);
+  border-radius: 50%;
+  padding: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 140px;
+  height: 140px;
+  border: 10px solid #fff;
+  z-index: 2;
+}
+
+.avatar img {
+  max-width: 126px;
+  max-height: 126px;
+}
+
+.comma {
+  position: absolute;
+  left: 20px;
+  top: 20px;
+}
+
+.comment_text {
+  margin-top: 15px;
+}
