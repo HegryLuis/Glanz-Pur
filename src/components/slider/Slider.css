@@ -9,6 +9,8 @@
   width: 500px;
   height: auto;
   border-radius: 10px;
+  transition: transform 500ms ease-in-out;
+  opacity: 0;
 }
 
 .slider-container {
@@ -23,11 +25,14 @@
 .text-block h4 {
   font-size: 36px;
   margin-bottom: 20px;
+  opacity: 0;
+  color: #45506b;
 }
 
 .text-block p {
   font-size: 16px;
   color: #555;
+  opacity: 0;
 }
 
 .text-paragraph {
@@ -90,4 +95,58 @@
   font-size: 24px;
   margin: 10px 0;
   color: #666f86;
+}
+
+.slide-img {
+  opacity: 0;
+  transform: translateY(100px);
+}
+
+.slide-img.slide-in {
+  animation: slideIn 1s forwards;
+}
+
+@keyframes slideIn {
+  0% {
+    opacity: 0;
+    transform: translateY(100px);
+  }
+  50% {
+    opacity: 0.5;
+    transform: translateY(0);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.text-block.slide-in h4,
+.text-block.slide-in p {
+  animation: textFadeIn 1s forwards;
+}
+
+@keyframes textFadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+.slide-in {
+  opacity: 1;
+  transform: translateX(0);
+}
+
+.fade-out {
+  opacity: 0;
+  transform: translateX(-100px);
+  transition: opacity 0.5s ease, transform 0.5s ease;
+}
+
+.fade-out .text-block h4,
+.fade-out .text-block p {
+  opacity: 0;
 }

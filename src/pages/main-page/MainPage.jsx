@@ -99,9 +99,17 @@ const MainPage = () => {
         </div>
 
         <div className="slider-content">
-          <h2>Dienstleistungen</h2>
+          <h2 className="blue-text">Dienstleistungen</h2>
 
           <Slider data={sliderData} />
+        </div>
+
+        <div className="comment-content">
+          <h2 className="blue-text">Was die Leute über uns sagen</h2>
+
+          <div className="comment-wrap">
+            <div></div>
+          </div>
         </div>
       </div>
     </>

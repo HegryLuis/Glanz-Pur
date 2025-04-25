@@ -1,20 +1,33 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import "./Slider.css";
 import arrow_left from "./../images/arrow_left.svg";
 import arrow_right from "./../images/arrow_right.svg";
 
 const Slider = ({ data }) => {
   const [currentIndex, setCurrentIndex] = useState(0);
+  const [animation, setAnimation] = useState("");
+
+  useEffect(() => {
+    // Сбрасываем анимацию и применяем её снова с задержкой
+    setAnimation("");
+    const timer = setTimeout(() => {
+      setAnimation("slide-in");
+    }, 50);
+    return () => clearTimeout(timer);
+  }, [currentIndex]);
 
   const prevData = () => {
+    setAnimation("fade-out");
     setCurrentIndex((prev) => (prev === 0 ? data.length - 1 : prev - 1));
   };
 
   const nextData = () => {
+    setAnimation("fade-out");
     setCurrentIndex((prev) => (prev === data.length - 1 ? 0 : prev + 1));
   };
 
   const selectIndex = (index) => {
+    setAnimation("fade-out");
     setCurrentIndex(index);
   };
 
@@ -24,12 +37,16 @@ const Slider = ({ data }) => {
 
   return (
     <div className="slider-wrap">
-      <div className="main-img">
-        <img src={data[currentIndex].img} alt={data[currentIndex].title} />
+      <div className={`main-img`}>
+        <img
+          src={data[currentIndex].img}
+          alt={data[currentIndex].title}
+          className={`slide-img ${animation}`}
+        />
       </div>
 
       <div className="slider-container">
-        <div className="text-block">
+        <div className={`text-block ${animation}`}>
           <h4>{data[currentIndex].title}</h4>
           {data[currentIndex].text.split("\n\n").map((paragraph, idx) => (
             <p key={idx} className="text-paragraph">
