@@ -1,0 +1,14 @@
+.comment-wrap {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+@media (max-width: 1440px) {
+  .comment-wrap {
+    flex-wrap: nowrap;
+    gap: 0;
+  }
+}

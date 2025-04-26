@@ -43,6 +43,23 @@ const Slider = ({ data }) => {
           alt={data[currentIndex].title}
           className={`slide-img ${animation}`}
         />
+
+        <div className="unactive-slide-mobile">
+          {[1, 2].map((offset) => {
+            const slide = getSlide(offset);
+            const index = (currentIndex + offset) % data.length;
+            return (
+              <div
+                className="slide-mobile"
+                key={index}
+                onClick={() => selectIndex(index)}
+              >
+                {/* <img alt="logo" src={slide.img} /> */}
+                <span>{slide.title}</span>
+              </div>
+            );
+          })}
+        </div>
       </div>
 
       <div className="slider-container">

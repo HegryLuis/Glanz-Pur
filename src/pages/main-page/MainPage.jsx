@@ -1,6 +1,5 @@
 import React from "react";
 import "./MainPage.css";
-import Header from "../../components/header/Header";
 import main_illustration from "./../../components/images/main_illustration.svg";
 import phone_logo from "./../../components/images/phone_logo.svg";
 import mail_logo from "./../../components/images/mail_logo.svg";
@@ -16,8 +15,8 @@ import Slider from "../../components/slider/Slider";
 import comment_avatar from "./../../components/images/comment_avatar.png";
 import CommentBlock from "../../components/commentBlock/CommentBlock";
 import arrow_left from "./../../components/images/arrow_left.svg";
-
 import arrow_right from "./../../components/images/arrow_right.svg";
+import CommentSlider from "../../components/commentSlider/CommentSlider";
 
 const MainPage = () => {
   const infoData = [
@@ -133,29 +132,7 @@ const MainPage = () => {
           <div className="comment-content">
             <h2 className="blue-text">Was die Leute über uns sagen</h2>
 
-            <div className="comment-wrap">
-              {commentData.map((data, index) => {
-                return (
-                  <CommentBlock
-                    key={index}
-                    avatar={data.avatar}
-                    stars={data.stars}
-                    name={data.name}
-                    text={data.text}
-                  />
-                );
-              })}
-            </div>
-            <div className="btns-wrap">
-              <div className="indicator">
-                <div className="comments-btn comments-back">
-                  <img alt="prev" src={arrow_left} />
-                </div>
-                <div className="comments-btn comments-next">
-                  <img alt="next" src={arrow_right} />
-                </div>
-              </div>
-            </div>
+            <CommentSlider commentData={commentData} />
           </div>
         </div>
       </div>
