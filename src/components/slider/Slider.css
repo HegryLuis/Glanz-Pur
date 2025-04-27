@@ -5,6 +5,13 @@
   flex-wrap: wrap;
 }
 
+.slider-wrap-mobile {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+  padding: 20px;
+}
+
 .main-img img {
   width: 500px;
   height: auto;

@@ -2,19 +2,31 @@ import React, { useState, useEffect } from "react";
 import "./Slider.css";
 import arrow_left from "./../images/arrow_left.svg";
 import arrow_right from "./../images/arrow_right.svg";
+import SliderCard from "../sliderCard/sliderCard";
 
 const Slider = ({ data }) => {
   const [currentIndex, setCurrentIndex] = useState(0);
   const [animation, setAnimation] = useState("");
+  const [isMobile, setIsMobile] = useState(window.innerWidth <= 1024);
 
   useEffect(() => {
-    // Сбрасываем анимацию и применяем её снова с задержкой
-    setAnimation("");
-    const timer = setTimeout(() => {
-      setAnimation("slide-in");
-    }, 50);
-    return () => clearTimeout(timer);
-  }, [currentIndex]);
+    const handleResize = () => {
+      setIsMobile(window.innerWidth <= 1024);
+    };
+
+    window.addEventListener("resize", handleResize);
+    return () => window.removeEventListener("resize", handleResize);
+  }, []);
+
+  useEffect(() => {
+    if (!isMobile) {
+      setAnimation("");
+      const timer = setTimeout(() => {
+        setAnimation("slide-in");
+      }, 50);
+      return () => clearTimeout(timer);
+    }
+  }, [currentIndex, isMobile]);
 
   const prevData = () => {
     setAnimation("fade-out");
@@ -31,22 +43,29 @@ const Slider = ({ data }) => {
     setCurrentIndex(index);
   };
 
-  const getSlide = (offset) => {
-    return data[(currentIndex + offset) % data.length];
-  };
+  // mobile(max-width: 1024px) — just render all cards
+  if (isMobile) {
+    return (
+      <div className="slider-wrap-mobile">
+        {data.map((item, index) => {
+          return <SliderCard key={index} item={item} />;
+        })}
+      </div>
+    );
+  }
 
+  // desktop (max-width > 1024px) - slider
   return (
     <div className="slider-wrap">
-      <div className={`main-img`}>
+      <div className="main-img">
         <img
           src={data[currentIndex].img}
           alt={data[currentIndex].title}
           className={`slide-img ${animation}`}
         />
-
         <div className="unactive-slide-mobile">
           {[1, 2].map((offset) => {
-            const slide = getSlide(offset);
+            const slide = data[(currentIndex + offset) % data.length];
             const index = (currentIndex + offset) % data.length;
             return (
               <div
@@ -54,7 +73,6 @@ const Slider = ({ data }) => {
                 key={index}
                 onClick={() => selectIndex(index)}
               >
-                {/* <img alt="logo" src={slide.img} /> */}
                 <span>{slide.title}</span>
               </div>
             );
@@ -75,7 +93,7 @@ const Slider = ({ data }) => {
         <div className="controls-block">
           <div className="unactive-slide">
             {[1, 2].map((offset) => {
-              const slide = getSlide(offset);
+              const slide = data[(currentIndex + offset) % data.length];
               const index = (currentIndex + offset) % data.length;
               return (
                 <div
