@@ -13,9 +13,6 @@ import slider_img_2 from "./../../components/images/slider_img_2.png";
 import slider_img_3 from "./../../components/images/slider_img_3.png";
 import Slider from "../../components/slider/Slider";
 import comment_avatar from "./../../components/images/comment_avatar.png";
-import CommentBlock from "../../components/commentBlock/CommentBlock";
-import arrow_left from "./../../components/images/arrow_left.svg";
-import arrow_right from "./../../components/images/arrow_right.svg";
 import CommentSlider from "../../components/commentSlider/CommentSlider";
 
 const MainPage = () => {
