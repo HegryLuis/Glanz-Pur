@@ -35,6 +35,7 @@
   border-radius: 50px;
   color: #3b82f6;
   border: 2px solid #3b82f6;
+  cursor: pointer;
 }
 
 .btn-wrap img {
@@ -55,6 +56,15 @@
   margin-left: 5px;
   cursor: pointer;
   color: #37474f;
+}
+
+.content-wrapper h2 {
+  margin: 20px 0;
+}
+
+.content-wrapper h4 {
+  font-size: 14px;
+  margin-bottom: 30px;
 }
 
 @media (max-width: 768px) {
@@ -94,6 +104,10 @@
 
   .container h2 {
     font-size: 24px;
+  }
+
+  .content-title {
+    text-align: center;
   }
 }
 
