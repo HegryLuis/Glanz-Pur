@@ -26,6 +26,7 @@ import reinigung_6 from "./../../components/images/reinigung_6.svg";
 import reinigung_7 from "./../../components/images/reinigung_7.svg";
 import LogoWrapper from "../../components/logoWrapper/LogoWrapper";
 import ReinigungBlock from "../../components/reinigungBlock/ReinigungBlock";
+import ServiceBlock from "../../components/serviceBlock/ServiceBlock";
 
 const cardsInfo = [
   {
@@ -290,6 +291,35 @@ const ReinigungPage = () => {
                 return (
                   <ReinigungBlock key={index} info={card} reverse={reverse} />
                 );
+              })}
+            </div>
+          </div>
+
+          <div className="services-wrap">
+            <div className="services-title blue-text">
+              <h2>Preise für Dienstleistungen</h2>
+              <h4>Transparente Preise für jede Dienstleistung</h4>
+            </div>
+
+            <div className="services-content">
+              {servicesInfo.map((service, index) => {
+                return <ServiceBlock key={index} info={service} />;
+              })}
+            </div>
+          </div>
+
+          <div className="services-wrap">
+            <div className="services-title blue-text">
+              <h2>Preise für zusätzliche Dienstleistungen</h2>
+              <h4>
+                Erweitern Sie Ihre Reinigung mit unseren zusätzlichen Services
+                für noch mehr Sauberkeit.
+              </h4>
+            </div>
+
+            <div className="services-content">
+              {additionalServicesInfo.map((service, index) => {
+                return <ServiceBlock key={index} info={service} />;
               })}
             </div>
           </div>

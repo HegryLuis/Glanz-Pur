@@ -67,6 +67,27 @@
   margin-bottom: 30px;
 }
 
+.services-title h2 {
+  margin-bottom: 20px;
+}
+
+.services-content {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(30%, 1fr));
+  gap: 60px 10px;
+  justify-content: center;
+}
+
+@media (max-width: 1024px) {
+  .services-content {
+    grid-template-columns: repeat(2, 40%);
+  }
+}
+
+.services-title {
+  margin: 100px 0;
+}
+
 @media (max-width: 768px) {
   .header {
     flex-direction: column;
@@ -108,6 +129,18 @@
 
   .content-title {
     text-align: center;
+  }
+
+  .services-title {
+    text-align: center;
+  }
+
+  .services-title h4 {
+    font-size: 14px;
+  }
+
+  .services-content {
+    grid-template-columns: repeat(1, 90%);
   }
 }
 
