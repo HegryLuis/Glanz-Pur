@@ -27,6 +27,7 @@ import reinigung_7 from "./../../components/images/reinigung_7.svg";
 import LogoWrapper from "../../components/logoWrapper/LogoWrapper";
 import ReinigungBlock from "../../components/reinigungBlock/ReinigungBlock";
 import ServiceBlock from "../../components/serviceBlock/ServiceBlock";
+import Calculator from "../../components/calculator/Calculator";
 
 const cardsInfo = [
   {
@@ -322,6 +323,12 @@ const ReinigungPage = () => {
                 return <ServiceBlock key={index} info={service} />;
               })}
             </div>
+          </div>
+        </div>
+
+        <div className="calculator-wrap">
+          <div className="wrap">
+            <Calculator />
           </div>
         </div>
       </div>

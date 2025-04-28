@@ -78,6 +78,11 @@
   justify-content: center;
 }
 
+.calculator-wrap {
+  margin-top: 100px;
+  background: #e8eaf0;
+}
+
 @media (max-width: 1024px) {
   .services-content {
     grid-template-columns: repeat(2, 40%);
