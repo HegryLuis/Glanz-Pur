@@ -3,6 +3,7 @@ import "./Calculator.css";
 import clock_logo from "./../../components/images/clock_logo.svg";
 import money_logo from "./../../components/images/money_logo.svg";
 import privacy_logo from "./../../components/images/privacy_logo.svg";
+import arrow_down from "./../../components/images/arrow_down.svg";
 
 const serviceChoose = [
   "Routinereinigung",
@@ -70,6 +71,14 @@ const Calculator = () => {
   const [addictionalServicesPrice, setAddictionalServicesPrice] = useState(0);
   const [estimatedTime, setEstimatedTime] = useState("");
   const [estimatedPrice, setEstimatedPrice] = useState("");
+  const [isMobile, setIsMobile] = useState(window.innerWidth <= 1024);
+  const [showDropdown, setShowDropdown] = useState(false);
+
+  useEffect(() => {
+    const handleResize = () => setIsMobile(window.innerWidth <= 1024);
+    window.addEventListener("resize", handleResize);
+    return () => window.removeEventListener("resize", handleResize);
+  }, []);
 
   useEffect(() => {
     let basePrice = 500;
@@ -121,86 +130,172 @@ const Calculator = () => {
         </span>
       </div>
 
-      <div className="calculator-top-wrap">
-        <div className="calculator-service-input">
-          <h3 className="blue-text">Wählen Sie einen Dienst</h3>
+      <div className="calculator-main-content">
+        <div className="calculator-block-wrap">
+          <div className="calculator-service-input">
+            <h3 className="blue-text">Wählen Sie einen Dienst</h3>
 
-          <div className="services-wrapper">
-            {serviceChoose.map((service, index) => {
-              return (
+            {isMobile ? (
+              <div className="mobile-services-wrapper">
                 <div
-                  key={index}
-                  className={`service-item blue-text ${
-                    selectedService === index ? "active" : ""
-                  }`}
-                  onClick={() => setSelectedService(index)}
+                  onClick={() => setShowDropdown((prev) => !prev)}
+                  className="service-btn"
                 >
-                  {service}
+                  <span>{serviceChoose[selectedService]}</span>
+                  <img alt="img" src={arrow_down} />
                 </div>
-              );
-            })}
-          </div>
 
-          <div className="services-room-nums">
-            <div className="room-block blue-text">
-              <h4>Anzahl der Zimmer</h4>
-              <div className="options-wrapper">
-                {roomOptions.map((option, index) => (
+                {showDropdown && (
+                  <ul className="mobile-services">
+                    {serviceChoose.map((service, index) => (
+                      <li
+                        key={index}
+                        onClick={() => {
+                          setSelectedService(index);
+                          setShowDropdown(false);
+                        }}
+                        className={` ${
+                          selectedService === index ? "active" : ""
+                        }`}
+                      >
+                        {service}
+                      </li>
+                    ))}
+                  </ul>
+                )}
+              </div>
+            ) : (
+              <div className="services-wrapper">
+                {serviceChoose.map((service, index) => (
                   <div
                     key={index}
-                    className={`option-item ${
-                      roomsCount === option ? "active" : ""
+                    className={`service-item blue-text ${
+                      selectedService === index ? "active" : ""
                     }`}
-                    onClick={() => setRoomsCount(option)}
+                    onClick={() => setSelectedService(index)}
                   >
-                    {option}
+                    {service}
                   </div>
                 ))}
               </div>
-            </div>
+            )}
 
-            <div className="room-block blue-text">
-              <h4>Anzahl der Abstellräume</h4>
-
-              <div className="room-block-wrap">
+            <div className="services-room-nums">
+              <div className="room-block blue-text">
+                <h4>Anzahl der Zimmer</h4>
                 <div className="options-wrapper">
-                  {storageOptions.map((option, index) => (
+                  {roomOptions.map((option, index) => (
                     <div
                       key={index}
                       className={`option-item ${
-                        storageRoomsCount === option ? "active" : ""
+                        roomsCount === option ? "active" : ""
                       }`}
-                      onClick={() => setStorageRoomsCount(option)}
+                      onClick={() => setRoomsCount(option)}
                     >
                       {option}
                     </div>
                   ))}
                 </div>
-                <span className="small-text">
-                  (Für 1 Lagerplatz ab 100 CHF)
-                </span>
+              </div>
+
+              <div className="room-block blue-text">
+                <h4>Anzahl der Abstellräume</h4>
+
+                <div className="room-block-wrap">
+                  <div className="options-wrapper">
+                    {storageOptions.map((option, index) => (
+                      <div
+                        key={index}
+                        className={`option-item ${
+                          storageRoomsCount === option ? "active" : ""
+                        }`}
+                        onClick={() => setStorageRoomsCount(option)}
+                      >
+                        {option}
+                      </div>
+                    ))}
+                  </div>
+                  <span className="small-text">
+                    (Für 1 Lagerplatz ab 100 CHF)
+                  </span>
+                </div>
+              </div>
+
+              <div className="room-block blue-text">
+                <h4>Anzahl der Bäder</h4>
+                <div className="room-block-wrap">
+                  <div className="options-wrapper">
+                    {bathroomOptions.map((option, index) => (
+                      <div
+                        key={index}
+                        className={`option-item ${
+                          bathroomsCount === option ? "active" : ""
+                        }`}
+                        onClick={() => setBathroomsCount(option)}
+                      >
+                        {option}
+                      </div>
+                    ))}
+                  </div>
+                  <span className="small-text">
+                    (1 inklusive, jede weitere ab 100 CHF)
+                  </span>
+                </div>
               </div>
             </div>
 
-            <div className="room-block blue-text">
-              <h4>Anzahl der Bäder</h4>
-              <div className="room-block-wrap">
-                <div className="options-wrapper">
-                  {bathroomOptions.map((option, index) => (
-                    <div
-                      key={index}
-                      className={`option-item ${
-                        bathroomsCount === option ? "active" : ""
-                      }`}
-                      onClick={() => setBathroomsCount(option)}
-                    >
-                      {option}
+            <div className="calculator-checkbox-input blue-text">
+              <h4>Zusätzliche Dienstleistungen</h4>
+
+              <div className="checkbox-wrapper">
+                {addictionalServices.map((service, index) => {
+                  const checkboxID = `addictional-service-${index}`;
+
+                  return (
+                    <div key={index} className="checkbox-item">
+                      <input
+                        id={checkboxID}
+                        name={checkboxID}
+                        type="checkbox"
+                        onChange={(e) => {
+                          if (e.target.checked) {
+                            setAddictionalServicesPrice((prev) => prev + 5);
+                          } else {
+                            setAddictionalServicesPrice((prev) => prev - 5);
+                          }
+                        }}
+                      />
+                      <label
+                        htmlFor={checkboxID}
+                      >{`${service.title} (für 1 ${service.subtitle} ab 5 CHF)`}</label>
                     </div>
-                  ))}
+                  );
+                })}
+              </div>
+
+              <div className="calculator-contact-input blue-text">
+                <h4>Kontaktinformationen</h4>
+
+                <div className="contact-input-wrap">
+                  <div className="contact-wrapper">
+                    {contactsOptions.map((contact, index) => {
+                      return (
+                        <div key={index} className="contact-item">
+                          <span>{contact.title}</span>
+                          <input
+                            type="text"
+                            placeholder={contact.placeholder}
+                          />
+                        </div>
+                      );
+                    })}
+                  </div>
+
+                  <div className="privacy-link">
+                    <img alt="privacy" src={privacy_logo} />
+                    <a>Privatsphäre und Politik</a>
+                  </div>
                 </div>
-                <span className="small-text">
-                  (1 inklusive, jede weitere ab 100 CHF)
-                </span>
               </div>
             </div>
           </div>
@@ -220,60 +315,60 @@ const Calculator = () => {
 
           <button className="btn result-btn">Jetzt bestellen</button>
         </div>
-      </div>
+        {/* 
+            <div className="calculator-bottom-wrap">
+            <div className="calculator-checkbox-input blue-text">
+                <h4>Zusätzliche Dienstleistungen</h4>
 
-      <div className="calculator-bottom-wrap">
-        <div className="calculator-checkbox-input blue-text">
-          <h4>Zusätzliche Dienstleistungen</h4>
+                <div className="checkbox-wrapper">
+                {addictionalServices.map((service, index) => {
+                    const checkboxID = `addictional-service-${index}`;
 
-          <div className="checkbox-wrapper">
-            {addictionalServices.map((service, index) => {
-              const checkboxID = `addictional-service-${index}`;
-
-              return (
-                <div key={index} className="checkbox-item">
-                  <input
-                    id={checkboxID}
-                    name={checkboxID}
-                    type="checkbox"
-                    onChange={(e) => {
-                      if (e.target.checked) {
-                        setAddictionalServicesPrice((prev) => prev + 5);
-                      } else {
-                        setAddictionalServicesPrice((prev) => prev - 5);
-                      }
-                    }}
-                  />
-                  <label
-                    htmlFor={checkboxID}
-                  >{`${service.title} (für 1 ${service.subtitle} ab 5 CHF)`}</label>
+                    return (
+                    <div key={index} className="checkbox-item">
+                        <input
+                        id={checkboxID}
+                        name={checkboxID}
+                        type="checkbox"
+                        onChange={(e) => {
+                            if (e.target.checked) {
+                            setAddictionalServicesPrice((prev) => prev + 5);
+                            } else {
+                            setAddictionalServicesPrice((prev) => prev - 5);
+                            }
+                        }}
+                        />
+                        <label
+                        htmlFor={checkboxID}
+                        >{`${service.title} (für 1 ${service.subtitle} ab 5 CHF)`}</label>
+                    </div>
+                    );
+                })}
                 </div>
-              );
-            })}
-          </div>
-        </div>
-
-        <div className="calculator-contact-input blue-text">
-          <h4>Kontaktinformationen</h4>
-
-          <div className="contact-input-wrap">
-            <div className="contact-wrapper">
-              {contactsOptions.map((contact, index) => {
-                return (
-                  <div key={index} className="contact-item">
-                    <span>{contact.title}</span>
-                    <input type="text" placeholder={contact.placeholder} />
-                  </div>
-                );
-              })}
             </div>
 
-            <div className="privacy-link">
-              <img alt="privacy" src={privacy_logo} />
-              <a>Privatsphäre und Politik</a>
+            <div className="calculator-contact-input blue-text">
+                <h4>Kontaktinformationen</h4>
+
+                <div className="contact-input-wrap">
+                <div className="contact-wrapper">
+                    {contactsOptions.map((contact, index) => {
+                    return (
+                        <div key={index} className="contact-item">
+                        <span>{contact.title}</span>
+                        <input type="text" placeholder={contact.placeholder} />
+                        </div>
+                    );
+                    })}
+                </div>
+
+                <div className="privacy-link">
+                    <img alt="privacy" src={privacy_logo} />
+                    <a>Privatsphäre und Politik</a>
+                </div>
+                </div>
             </div>
-          </div>
-        </div>
+            </div> */}
       </div>
     </div>
   );

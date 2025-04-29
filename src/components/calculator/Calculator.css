@@ -2,9 +2,8 @@
   padding: 40px 0;
 }
 
-.calculator-top-wrap {
+.calculator-main-content {
   display: flex;
-  justify-content: space-between;
 }
 
 .calculator-result-box {
@@ -31,6 +30,7 @@
 
 .result-btn {
   width: 100%;
+  min-height: 60px;
   border-radius: 0;
   border-bottom-left-radius: 15px;
   border-bottom-right-radius: 15px;
@@ -47,20 +47,18 @@
 .services-wrapper {
   display: flex;
   width: 90%;
+  height: 50px;
   font-size: 12px;
   justify-content: space-between;
   background: #d8dbe3;
   align-items: center;
-  height: 40px;
   border-radius: 30px;
 }
 
 .service-item {
   cursor: pointer;
-  height: 100%;
-  width: 100%;
   text-align: center;
-  padding: 10px 0;
+  padding: 15px;
 }
 
 .service-item.active {
@@ -129,10 +127,6 @@
   padding-bottom: 40px;
 }
 
-.calculator-bottom-wrap {
-  width: 80%;
-}
-
 .checkbox-wrapper {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
@@ -191,4 +185,86 @@
 .privacy-link a {
   text-decoration: underline;
   margin-left: 5px;
+}
+
+.service-btn {
+  display: flex;
+  gap: 20px;
+  height: 40px;
+  width: 300px;
+  font-size: 16px;
+  justify-content: space-between;
+  align-items: center;
+  background: #3b82f6;
+  padding: 10px;
+  border-radius: 10px;
+  color: #fff;
+  cursor: pointer;
+}
+
+.service-btn img {
+  width: 20px;
+  height: 20px;
+}
+
+.mobile-services {
+  margin-top: 10px;
+  max-width: 250px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  background: #3b82f6;
+  color: #fff;
+  padding: 10px;
+  border-radius: 10px;
+}
+
+@media (min-width: 1440px) {
+  .services-wrapper {
+    font-size: 20px;
+  }
+
+  .checkbox-wrapper {
+    font-size: 20px;
+  }
+}
+
+@media (max-width: 1024px) {
+  .calculator-main-content {
+    flex-direction: column;
+  }
+
+  .calculator-result-box {
+    width: 50%;
+    max-height: 400px;
+    margin: 20px auto;
+  }
+
+  .contact-input-wrap {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .privacy-link {
+    margin-top: 20px;
+  }
+
+  .contact-wrapper {
+    display: flex;
+    flex-direction: column;
+  }
+}
+
+@media (max-width: 768px) {
+  .calculator-result-box {
+    width: 90%;
+  }
+
+  .calculator-title-wrap h2 {
+    margin-bottom: 20px;
+  }
+
+  .calculator-title-wrap span {
+    font-size: 12px;
+  }
 }
