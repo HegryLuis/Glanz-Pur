@@ -1,9 +1,10 @@
 import React from "react";
-import styles from "./ServiceBlock.module.css";
+import styles from "./ServiceBlockV2.module.css";
 import clock_logo from "./../../components/images/clock_logo.svg";
 import money_logo from "./../../components/images/money_logo.svg";
+import { style } from "framer-motion/client";
 
-const ServiceBlock = ({ info }) => {
+const ServiceBlockV2 = ({ info }) => {
   return (
     <div className={styles.box}>
       <div className={styles.box_logo}>
@@ -24,8 +25,10 @@ const ServiceBlock = ({ info }) => {
           <p>{info.price}</p>
         </div>
       </div>
+
+      <button className={`btn ${styles.service_btn}`}>Jetzt bestellen</button>
     </div>
   );
 };
 
-export default ServiceBlock;
+export default ServiceBlockV2;

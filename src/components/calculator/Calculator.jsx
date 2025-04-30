@@ -315,60 +315,6 @@ const Calculator = () => {
 
           <button className="btn result-btn">Jetzt bestellen</button>
         </div>
-        {/* 
-            <div className="calculator-bottom-wrap">
-            <div className="calculator-checkbox-input blue-text">
-                <h4>Zusätzliche Dienstleistungen</h4>
-
-                <div className="checkbox-wrapper">
-                {addictionalServices.map((service, index) => {
-                    const checkboxID = `addictional-service-${index}`;
-
-                    return (
-                    <div key={index} className="checkbox-item">
-                        <input
-                        id={checkboxID}
-                        name={checkboxID}
-                        type="checkbox"
-                        onChange={(e) => {
-                            if (e.target.checked) {
-                            setAddictionalServicesPrice((prev) => prev + 5);
-                            } else {
-                            setAddictionalServicesPrice((prev) => prev - 5);
-                            }
-                        }}
-                        />
-                        <label
-                        htmlFor={checkboxID}
-                        >{`${service.title} (für 1 ${service.subtitle} ab 5 CHF)`}</label>
-                    </div>
-                    );
-                })}
-                </div>
-            </div>
-
-            <div className="calculator-contact-input blue-text">
-                <h4>Kontaktinformationen</h4>
-
-                <div className="contact-input-wrap">
-                <div className="contact-wrapper">
-                    {contactsOptions.map((contact, index) => {
-                    return (
-                        <div key={index} className="contact-item">
-                        <span>{contact.title}</span>
-                        <input type="text" placeholder={contact.placeholder} />
-                        </div>
-                    );
-                    })}
-                </div>
-
-                <div className="privacy-link">
-                    <img alt="privacy" src={privacy_logo} />
-                    <a>Privatsphäre und Politik</a>
-                </div>
-                </div>
-            </div>
-            </div> */}
       </div>
     </div>
   );
