@@ -1,0 +1,20 @@
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 120px 0;
+}
+
+.header img {
+  max-width: 40%;
+  height: auto;
+}
+
+.header-title-block {
+  height: 80%;
+}
+
+.header-title-block h2 {
+  padding: 20px 0 30px 0;
+  font-size: 96px;
+}
