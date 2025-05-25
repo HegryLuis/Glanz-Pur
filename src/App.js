@@ -10,9 +10,9 @@ function App() {
   return (
     <div className="App">
       <Header />
-      {/* <MainPage /> */}
-      {/* <ReinigungPage /> */}
-      {/* <UmzugPage /> */}
+      <MainPage />
+      <ReinigungPage />
+      <UmzugPage />
       <HausmeisterservicePage />
       <Footer />
     </div>
