@@ -154,7 +154,7 @@ const Calculator = () => {
                           setSelectedService(index);
                           setShowDropdown(false);
                         }}
-                        className={` ${
+                        className={`blue-text  ${
                           selectedService === index ? "active" : ""
                         }`}
                       >

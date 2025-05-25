@@ -2,7 +2,6 @@ import React from "react";
 import styles from "./ServiceBlockV2.module.css";
 import clock_logo from "./../../components/images/clock_logo.svg";
 import money_logo from "./../../components/images/money_logo.svg";
-import { style } from "framer-motion/client";
 
 const ServiceBlockV2 = ({ info }) => {
   return (

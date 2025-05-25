@@ -109,13 +109,14 @@ const Slider = ({ data }) => {
           </div>
 
           <div className="controls">
-            <div className="indicator">
+            <div className="slider-indicator indicator">
               <div onClick={prevData}>
                 <img alt="prev" src={arrow_left} />
               </div>
-              <span id="slide-indicator">
-                {currentIndex + 1} / {data.length}
-              </span>
+              <span className="slide-indicator">{currentIndex + 1}</span>
+
+              <span className="slide-indicator">/</span>
+              <span className="slide-indicator">{data.length}</span>
               <div onClick={nextData}>
                 <img alt="next" src={arrow_right} />
               </div>

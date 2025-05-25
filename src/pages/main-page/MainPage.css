@@ -106,10 +106,6 @@
     margin: 50px auto;
     max-width: 60%;
   }
-
-  .container h2 {
-    font-size: 36px;
-  }
 }
 
 @media (max-width: 768px) {
@@ -140,10 +136,6 @@
   .contact {
     width: 200px;
     padding: 5px 0;
-  }
-
-  .container h2 {
-    font-size: 24px;
   }
 }
 

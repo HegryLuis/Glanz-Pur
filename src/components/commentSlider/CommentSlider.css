@@ -6,6 +6,11 @@
   gap: 20px;
 }
 
+.comments-btns-wrap {
+  display: flex;
+  justify-content: center;
+}
+
 @media (max-width: 1440px) {
   .comment-wrap {
     flex-wrap: nowrap;

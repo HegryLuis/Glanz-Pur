@@ -28,6 +28,7 @@ import LogoWrapper from "../../components/logoWrapper/LogoWrapper";
 import ReinigungBlock from "../../components/reinigungBlock/ReinigungBlock";
 import ServiceBlock from "../../components/serviceBlock/ServiceBlock";
 import Calculator from "../../components/calculator/Calculator";
+import ServiceBlockV2 from "../../components/serviceBlockV2/ServiceBlockV2";
 
 const cardsInfo = [
   {
@@ -304,7 +305,7 @@ const ReinigungPage = () => {
 
             <div className="services-content">
               {servicesInfo.map((service, index) => {
-                return <ServiceBlock key={index} info={service} />;
+                return <ServiceBlockV2 key={index} info={service} />;
               })}
             </div>
           </div>
@@ -320,7 +321,7 @@ const ReinigungPage = () => {
 
             <div className="services-content">
               {additionalServicesInfo.map((service, index) => {
-                return <ServiceBlock key={index} info={service} />;
+                return <ServiceBlockV2 key={index} info={service} />;
               })}
             </div>
           </div>

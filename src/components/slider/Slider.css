@@ -1,4 +1,5 @@
 .slider-wrap {
+  max-width: 1500px;
   display: flex;
   gap: 24px;
   padding: 20px;
@@ -9,7 +10,6 @@
   display: flex;
   flex-direction: column;
   gap: 30px;
-  padding: 20px;
 }
 
 .main-img img {
@@ -102,7 +102,12 @@
   gap: 20px;
 }
 
-#slide-indicator {
+.slider-indicator {
+  justify-content: space-around;
+  width: 100%;
+}
+
+.slide-indicator {
   font-size: 24px;
   margin: 10px 0;
   color: #666f86;
@@ -168,18 +173,23 @@
     height: 100%;
   }
 
-  .unactive-slide {
-    max-width: 200px;
+  .slide {
+    width: 150px;
   }
 
   .slide img {
-    width: 100px;
+    width: 150px;
     height: auto;
   }
 
   .controls {
     margin-left: 20px;
     max-width: 300px;
+  }
+
+  .slider-wrap {
+    padding: 10px;
+    gap: 10px;
   }
 }
 

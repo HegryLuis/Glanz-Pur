@@ -12,6 +12,7 @@ import tabler_paint_logo from "./../../components/images/tabler_paint_logo.svg";
 import toolkit_logo from "./../../components/images/toolkit_logo.svg";
 import wall_logo from "./../../components/images/wall_logo.svg";
 import flowers_logo from "./../../components/images/flowers_logo.svg";
+import Hausmeisterservice_1 from "./../../components/images/Hausmeisterservice_1.svg";
 import Hausmeisterservice_2 from "./../../components/images/Hausmeisterservice-2.svg";
 import house_chimney_logo from "./../../components/images/house_chimney_logo.svg";
 import screwdriver_logo from "./../../components/images/screwdriver_logo.svg";
@@ -176,7 +177,9 @@ const HausmeisterservicePage = () => {
               <span className="blue-text sub-header-title">
                 Wir machen Ihr Zuhause wieder funktionstüchtig
               </span>
-              <h2 className="blue-text header-title">Alles läuft</h2>
+              <h2 className="blue-text header-title header-title-haus">
+                Alles läuft
+              </h2>
               <div className="btns-wrap">
                 <button className="btn">Jetzt bestellen</button>
                 <div className="btn-wrap">
@@ -197,7 +200,7 @@ const HausmeisterservicePage = () => {
                 </div>
               </div>
             </div>
-            <img alt="main-illustration" src={Hausmeisterservice_2} />
+            <img alt="main-illustration" src={Hausmeisterservice_1} />
           </div>
 
           <div className="content-wrapper">
@@ -208,7 +211,7 @@ const HausmeisterservicePage = () => {
               </h4>
             </div>
 
-            <div className="block-wrapper">
+            <div className="hausmeister-block-wrapper">
               {servicesInfo.map((service, index) => {
                 return <ServiceBlockV2 key={index} info={service} />;
               })}

@@ -15,30 +15,36 @@ const Footer = () => {
   return (
     <footer>
       <div className="wrap">
-        <div className="footer-left">
-          <h4>Unsere Mission</h4>
-          <span>
-            Unsere Mission ist es, Sauberkeit, Komfort und Bequemlichkeit in
-            jedes Zuhause und Büro zu bringen. Wir schaffen makellose Räume zum
-            Leben und Arbeiten, indem wir professionelle Reinigungsdienste,
-            Umzugshilfe und hochwertige Handwerksleistungen anbieten.
-          </span>
+        <div className="footer-main-wrap">
+          <div className="footer-left">
+            <h4>Unsere Mission</h4>
+            <span>
+              Unsere Mission ist es, Sauberkeit, Komfort und Bequemlichkeit in
+              jedes Zuhause und Büro zu bringen. Wir schaffen makellose Räume
+              zum Leben und Arbeiten, indem wir professionelle
+              Reinigungsdienste, Umzugshilfe und hochwertige Handwerksleistungen
+              anbieten.
+            </span>
+          </div>
+
+          <div className="footer-middle">
+            <img alt="footer-img" src={footer_logo} />
+          </div>
+
+          <div className="footer-right">
+            {contactData.map((data, index) => {
+              return (
+                <div key={index} className="contact-data">
+                  <img alt="icon" src={data.img} />
+                  <span>{data.text}</span>
+                </div>
+              );
+            })}
+          </div>
         </div>
 
-        <div className="footer-middle">
-          <img alt="footer-img" src={footer_logo} />
+        <div className="footer-end-wrap">
           <span>2025 ©Premium Renovations, All rights reserved.</span>
-        </div>
-
-        <div className="footer-right">
-          {contactData.map((data, index) => {
-            return (
-              <div key={index} className="contact-data">
-                <img alt="icon" src={data.img} />
-                <span>{data.text}</span>
-              </div>
-            );
-          })}
         </div>
       </div>
     </footer>

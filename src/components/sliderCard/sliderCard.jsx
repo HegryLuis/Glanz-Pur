@@ -16,27 +16,6 @@ const SliderCard = ({ item }) => {
         <h4 className={styles.slider_card_title}>{item.title}</h4>
       </div>
 
-      <p className={styles.slider_card_text}>
-        {showMore
-          ? paragraphs.map((p, idx) => (
-              <span key={idx}>
-                {p}
-                <br />
-                <br />
-              </span>
-            ))
-          : `${paragraphs[0]}...`}
-      </p>
-
-      {!showMore && (
-        <button
-          className={styles.show_more_btn}
-          onClick={() => setShowMore(true)}
-        >
-          Show more
-        </button>
-      )}
-
       <button className={`btn ${styles.btn_slider}`}>Jetzt bestellen</button>
     </div>
   );

@@ -66,6 +66,7 @@
   height: 70px;
   border: 10px solid #fff;
   z-index: 2;
+  padding: 20px 0;
 }
 
 @media (max-width: 1440px) {

@@ -19,7 +19,7 @@
   font-size: 96px;
 }
 
-.block-wrapper {
+.hausmeister-block-wrapper {
   margin-top: 100px;
   display: grid;
   grid-template-columns: repeat(3, 1fr);
@@ -27,13 +27,17 @@
 }
 
 @media (max-width: 1024px) {
-  .block-wrapper {
+  .hausmeister-block-wrapper {
     grid-template-columns: repeat(2, 1fr);
   }
 }
 
 @media (max-width: 768px) {
-  .block-wrapper {
+  .hausmeister-block-wrapper {
     grid-template-columns: repeat(1, 1fr);
+  }
+
+  .header-title-haus {
+    font-size: 50px !important;
   }
 }

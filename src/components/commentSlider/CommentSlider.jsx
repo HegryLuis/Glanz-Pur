@@ -31,7 +31,6 @@ const CommentSlider = ({ commentData }) => {
     );
   };
 
-  // Получаем комментарии для отображения
   const visibleComments = isWideScreen
     ? [
         commentData[currentIndex],
@@ -53,7 +52,7 @@ const CommentSlider = ({ commentData }) => {
           />
         ))}
       </div>
-      <div className="btns-wrap">
+      <div className="comments-btns-wrap">
         <div className="indicator">
           <div className="comments-btn comments-back" onClick={prevComment}>
             <img alt="prev" src={arrow_left} />

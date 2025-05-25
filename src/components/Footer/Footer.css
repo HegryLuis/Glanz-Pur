@@ -1,15 +1,21 @@
 footer {
   margin-top: 140px;
-  height: 250px;
+  /* height: 250px; */
   background: #3b82f6;
   color: #fff;
 }
-
+/* 
 footer .wrap {
   display: flex;
   justify-content: space-between;
   height: 100%;
   gap: 30px;
+} */
+
+.footer-main-wrap {
+  display: flex;
+  justify-content: space-between;
+  padding-top: 20px;
 }
 
 .footer-left {
@@ -47,6 +53,12 @@ footer .wrap {
   gap: 20px;
 }
 
+.footer-end-wrap {
+  padding: 20px 0;
+  display: flex;
+  justify-content: center;
+}
+
 .contact-data {
   text-align: center;
 }
@@ -60,11 +72,11 @@ footer .wrap {
 @media (max-width: 1440px) {
   .footer-left span {
     font-size: 14px;
-    max-width: 250px;
+    /* max-width: 250px; */
   }
 
   .footer-right {
-    align-items: flex-start;
+    /* align-items: flex-start; */
   }
 
   .contact-data span {
@@ -84,7 +96,7 @@ footer .wrap {
 }
 
 @media (max-width: 768px) {
-  footer .wrap {
+  .footer-main-wrap {
     flex-direction: column;
     align-items: center;
     gap: 20px;
@@ -130,7 +142,35 @@ footer .wrap {
   }
 
   .contact-data span {
-    font-size: 8px;
+    font-size: 10px;
+  }
+}
+
+@media (max-width: 425px) {
+  .footer-right {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .contact-data {
+    flex-direction: row;
+  }
+
+  .contact-data span {
+    font-size: 14px;
+  }
+
+  .footer-left {
+    text-align: left;
+  }
+
+  .footer-left span {
+    margin: 0;
+    line-height: 1.5rem;
+  }
+
+  .footer-end-wrap span {
+    font-size: 12px;
   }
 }
 

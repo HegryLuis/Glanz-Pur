@@ -15,6 +15,7 @@ import ReinigungBlock from "../../components/reinigungBlock/ReinigungBlock";
 import InfoBlock from "../../components/infoBlock/InfoBlock";
 import ServiceBlock from "../../components/serviceBlock/ServiceBlock";
 import Calculator from "../../components/calculator/Calculator";
+import ServiceBlockV2 from "../../components/serviceBlockV2/ServiceBlockV2";
 
 const cardsInfo = [
   {
@@ -138,13 +139,13 @@ const UmzugPage = () => {
 
         <div className="services-wrap">
           <div className="services-title blue-text">
-            <h2>Dienstleistungspreise</h2>
+            <h2 className="services-title-h2">Dienstleistungspreise</h2>
             <h4>Transparente Preise für jede Dienstleistung</h4>
           </div>
 
           <div className="services-content">
             {infoData.map((data, index) => {
-              return <ServiceBlock info={data} key={index} />;
+              return <ServiceBlockV2 info={data} key={index} />;
             })}
           </div>
         </div>
