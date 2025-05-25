@@ -34,6 +34,8 @@ const Header = () => {
         <div className="navbar">
           <ul className="menu">
             {menuItems.map((item, index) => {
+              const isActive = activeIndex === index;
+
               return (
                 <li
                   key={index}
@@ -46,8 +48,8 @@ const Header = () => {
                   }}
                 >
                   <span className="blue-text">{item}</span>
-
-                  {activeIndex === index && <div className="dot" />}
+                  <div className={`dot ${isActive ? "visible" : ""}`} />
+                  {/* {activeIndex === index && <div className="dot" />} */}
                 </li>
               );
             })}

@@ -28,6 +28,7 @@
   flex-direction: column;
   gap: 10px;
   line-height: 1.6;
+  justify-content: space-between;
 }
 
 .box_text.reverse {
@@ -98,9 +99,13 @@
   }
 
   .btn_box {
-    margin: 0 auto;
+    margin: 10px auto;
+    width: 70%;
   }
 }
 
 @media (max-width: 425px) {
+  .btn_box {
+    width: 90%;
+  }
 }
