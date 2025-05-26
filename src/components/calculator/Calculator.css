@@ -288,8 +288,20 @@
   }
 
   .contact-wrapper {
+    width: 80%;
     display: flex;
     flex-direction: column;
+    align-items: center;
+  }
+
+  .contact-item {
+    width: 90%;
+    margin: 0 auto;
+  }
+
+  .contact-item input {
+    width: 100%;
+    margin: 0 auto;
   }
 }
 
@@ -304,5 +316,9 @@
 
   .calculator-title-wrap span {
     font-size: 12px;
+  }
+
+  .contact-wrapper {
+    width: 100%;
   }
 }

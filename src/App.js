@@ -9,8 +9,6 @@ import ReinigungPage from "./pages/reinigung/ReinigungPage";
 import UmzugPage from "./pages/uzmug/UmzugPage";
 
 function App() {
-  const [isModalOpen, setIsModal] = useState(true);
-
   return (
     <div className="App">
       <Header />
