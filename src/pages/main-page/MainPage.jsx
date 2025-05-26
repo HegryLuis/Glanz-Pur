@@ -16,6 +16,11 @@ import comment_avatar from "./../../components/images/comment_avatar.png";
 import CommentSlider from "../../components/commentSlider/CommentSlider";
 
 const MainPage = () => {
+  const handleClick = () => {
+    const element = document.getElementById("calculator-title-wrap");
+    if (element) element.scrollIntoView({ behavior: "smooth" });
+  };
+
   const infoData = [
     {
       logo: vacuum_logo,
@@ -79,14 +84,16 @@ const MainPage = () => {
     <>
       <div className="container">
         <div className="wrap">
-          <div className="main-header">
+          <div id="main-header" className="main-header">
             <div className="main-title-block">
               <span className="blue-text main-text">
                 Professionelle Reinigung für Ihr Zuhause und Büro. Schnell und
                 zuverlässig.
               </span>
               <h2 className="blue-text">Glanz Pur</h2>
-              <button className="btn">Jetzt bestellen</button>
+              <button className="btn" onClick={handleClick}>
+                Jetzt bestellen
+              </button>
 
               <div className="contacts">
                 <div className="contact phone">

@@ -4,6 +4,11 @@ import clock_logo from "./../../components/images/clock_logo.svg";
 import money_logo from "./../../components/images/money_logo.svg";
 
 const ServiceBlockV2 = ({ info }) => {
+  const handleClick = () => {
+    const element = document.getElementById("calculator-title-wrap");
+    if (element) element.scrollIntoView({ behavior: "smooth" });
+  };
+
   return (
     <div className={styles.box}>
       <div className={styles.box_logo}>
@@ -25,7 +30,9 @@ const ServiceBlockV2 = ({ info }) => {
         </div>
       </div>
 
-      <button className={`btn ${styles.service_btn}`}>Jetzt bestellen</button>
+      <button className={`btn ${styles.service_btn}`} onClick={handleClick}>
+        Jetzt bestellen
+      </button>
     </div>
   );
 };

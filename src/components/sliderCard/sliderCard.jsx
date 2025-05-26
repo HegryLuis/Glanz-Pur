@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import styles from "./sliderCard.module.css";
 
-const SliderCard = ({ item }) => {
+const SliderCard = ({ item, onClick }) => {
   const [showMore, setShowMore] = useState(false);
   const paragraphs = item.text.split("\n\n");
 
@@ -16,7 +16,9 @@ const SliderCard = ({ item }) => {
         <h4 className={styles.slider_card_title}>{item.title}</h4>
       </div>
 
-      <button className={`btn ${styles.btn_slider}`}>Jetzt bestellen</button>
+      <button className={`btn ${styles.btn_slider}`} onClick={onClick}>
+        Jetzt bestellen
+      </button>
     </div>
   );
 };

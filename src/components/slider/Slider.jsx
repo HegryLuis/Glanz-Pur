@@ -9,6 +9,11 @@ const Slider = ({ data }) => {
   const [animation, setAnimation] = useState("");
   const [isMobile, setIsMobile] = useState(window.innerWidth <= 1024);
 
+  const handleClick = () => {
+    const element = document.getElementById("calculator-title-wrap");
+    if (element) element.scrollIntoView({ behavior: "smooth" });
+  };
+
   useEffect(() => {
     const handleResize = () => {
       setIsMobile(window.innerWidth <= 1024);
@@ -48,7 +53,7 @@ const Slider = ({ data }) => {
     return (
       <div className="slider-wrap-mobile">
         {data.map((item, index) => {
-          return <SliderCard key={index} item={item} />;
+          return <SliderCard key={index} item={item} onClick={handleClick} />;
         })}
       </div>
     );
@@ -121,7 +126,9 @@ const Slider = ({ data }) => {
                 <img alt="next" src={arrow_right} />
               </div>
             </div>
-            <button className="btn">Jetzt bestellen</button>
+            <button className="btn" onClick={handleClick}>
+              Jetzt bestellen
+            </button>
           </div>
         </div>
       </div>

@@ -12,8 +12,6 @@ import phone_logo from "./../../components/images/phone_logo.svg";
 import mail_logo from "./../../components/images/mail_logo.svg";
 import LogoWrapper from "../../components/logoWrapper/LogoWrapper";
 import ReinigungBlock from "../../components/reinigungBlock/ReinigungBlock";
-import InfoBlock from "../../components/infoBlock/InfoBlock";
-import ServiceBlock from "../../components/serviceBlock/ServiceBlock";
 import Calculator from "../../components/calculator/Calculator";
 import ServiceBlockV2 from "../../components/serviceBlockV2/ServiceBlockV2";
 
@@ -47,15 +45,6 @@ const cardsInfo = [
     text: "Unser Komplexservice kombiniert zwei wichtige Dienstleistungen: den Umzugsservice und die Umzugsreinigung. So sparen Sie Zeit und Aufwand, da wir sowohl den sicheren Transport Ihrer Möbel als auch die gründliche Reinigung Ihrer alten oder neuen Wohnung übernehmen.\n\nWir kümmern uns um die fachgerechte Verpackung Ihrer Gegenstände, den sicheren Transport und die sorgfältige Entladung am neuen Standort. Dabei sorgen wir dafür, dass alles unbeschädigt ankommt und auf Wunsch auch Möbel aufgebaut werden. Gleichzeitig reinigen wir die alte Wohnung gründlich, damit sie in einwandfreiem Zustand übergeben werden kann. Dazu gehören die Reinigung von Böden, Fenstern, Küche, Bad sowie schwer zugänglichen Stellen, um höchste Sauberkeit zu gewährleisten.\n\nDer Preis und die Dauer unseres Services hängen von verschiedenen Faktoren ab. Entscheidend sind die Wohnungsgröße, die Menge der Möbel und Gegenstände sowie die Entfernung zwischen den Standorten. Auch der Reinigungsaufwand spielt eine Rolle – stärker verschmutzte Wohnungen oder spezielle Reinigungsanforderungen erfordern mehr Zeit und Ressourcen.\n\nZusätzliche Leistungen wie der Aufbau von Möbeln, die Entsorgung alter Gegenstände oder besondere Transportanforderungen können den Gesamtumfang beeinflussen. Unser Ziel ist es, Ihnen einen reibungslosen, effizienten und stressfreien Umzug zu ermöglichen – professionell, zuverlässig und aus einer Hand.",
   },
 ];
-
-// {
-//     logo: vacuum_logo_2,
-//     title: "Routinereinigung",
-//     description:
-//       "Unterhaltsreinigung der Räumlichkeiten, einschließlich Staubwischen, Reinigen der Böden, Sanitär- und Kücheneinrichtungen, um sie sauber und frisch zu halten",
-//     time: "4 - 5 Std.",
-//     price: "555 - 750 CHF",
-//   },
 const infoData = [
   {
     logo: transporter_icon,
@@ -84,6 +73,15 @@ const infoData = [
 ];
 
 const UmzugPage = () => {
+  const handleClick = () => {
+    const element = document.getElementById("calculator-title-wrap");
+    if (element) element.scrollIntoView({ behavior: "smooth" });
+  };
+  const handleBackClick = () => {
+    const element = document.getElementById("main-header");
+    if (element) element.scrollIntoView({ behavior: "smooth" });
+  };
+
   return (
     <div className="container">
       <div className="wrap">
@@ -95,8 +93,10 @@ const UmzugPage = () => {
             </span>
             <h2 className="blue-text header-title">Umzug</h2>
             <div className="btns-wrap">
-              <button className="btn">Jetzt bestellen</button>
-              <div className="btn-wrap">
+              <button className="btn" onClick={handleClick}>
+                Jetzt bestellen
+              </button>
+              <div className="btn-wrap" onClick={handleBackClick}>
                 <img alt="back" src={back_logo} />
                 <span>Zurück zu Home</span>
               </div>

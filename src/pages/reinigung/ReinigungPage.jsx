@@ -243,6 +243,15 @@ const additionalServicesInfo = [
 ];
 
 const ReinigungPage = () => {
+  const handleClick = () => {
+    const element = document.getElementById("calculator-title-wrap");
+    if (element) element.scrollIntoView({ behavior: "smooth" });
+  };
+  const handleBackClick = () => {
+    const element = document.getElementById("main-header");
+    if (element) element.scrollIntoView({ behavior: "smooth" });
+  };
+
   return (
     <>
       <div className="container">
@@ -255,8 +264,10 @@ const ReinigungPage = () => {
               </span>
               <h2 className="blue-text header-title">Reinigung</h2>
               <div className="btns-wrap">
-                <button className="btn">Jetzt bestellen</button>
-                <div className="btn-wrap">
+                <button className="btn" onClick={handleClick}>
+                  Jetzt bestellen
+                </button>
+                <div className="btn-wrap" onClick={handleBackClick}>
                   <img alt="back" src={back_logo} />
                   <span>Zurück zu Home</span>
                 </div>
