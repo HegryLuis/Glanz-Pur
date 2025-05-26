@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/Glanz-Pur/static/css/main.95cdfdbe.css",
-    "main.js": "/Glanz-Pur/static/js/main.4ba4e68d.js",
+    "main.css": "/Glanz-Pur/static/css/main.713e351b.css",
+    "main.js": "/Glanz-Pur/static/js/main.bd722189.js",
     "static/media/slider_img_3.png": "/Glanz-Pur/static/media/slider_img_3.d1b06ba0deda7dc038b8.png",
     "static/media/slider_img_1.png": "/Glanz-Pur/static/media/slider_img_1.6726a6a1611cc8e30cd9.png",
     "static/media/slider_img_2.png": "/Glanz-Pur/static/media/slider_img_2.ddbc6ab9a4e3d7f15840.png",
@@ -54,6 +54,7 @@
     "static/media/clock_logo.svg": "/Glanz-Pur/static/media/clock_logo.86e7514888d57ec36cce536b8e5c87d6.svg",
     "static/media/glue_logo.svg": "/Glanz-Pur/static/media/glue_logo.a36fca684d7b25c440e2657c77bf886d.svg",
     "static/media/screwdriver_logo.svg": "/Glanz-Pur/static/media/screwdriver_logo.ca1b8abfe701c568ebaa54b3c621d561.svg",
+    "static/media/checkMark.svg": "/Glanz-Pur/static/media/checkMark.e9df9796058b10fb964b7f165aad03c1.svg",
     "static/media/hammer_logo.svg": "/Glanz-Pur/static/media/hammer_logo.bb194f8cad34529f32cfc2eb2ee4ffe8.svg",
     "static/media/blanket_logo.svg": "/Glanz-Pur/static/media/blanket_logo.132a697fd89cef5c010c63e23a079860.svg",
     "static/media/chisel_logo.svg": "/Glanz-Pur/static/media/chisel_logo.e121cd64d064610148eeb4b3181c250e.svg",
@@ -68,15 +69,16 @@
     "static/media/arrow_right.svg": "/Glanz-Pur/static/media/arrow_right.df8f24e1ac68d195358c28568e26b823.svg",
     "static/media/arrow_left.svg": "/Glanz-Pur/static/media/arrow_left.e99083aa69df58c372ae1d9b0f274948.svg",
     "static/media/pipe_logo.svg": "/Glanz-Pur/static/media/pipe_logo.1193943d1d37bfc40fda26dc980b5584.svg",
+    "static/media/backgroundStar.svg": "/Glanz-Pur/static/media/backgroundStar.28e620e5765e8e69959d9009827f0950.svg",
     "static/media/water_logo.svg": "/Glanz-Pur/static/media/water_logo.bd9ea334920706c0bcce825d994b8f41.svg",
     "static/media/curtains_logo.svg": "/Glanz-Pur/static/media/curtains_logo.0ab388062bac93d5111e02b62347dd64.svg",
     "static/media/burgerMenu_close.svg": "/Glanz-Pur/static/media/burgerMenu_close.b21cf1cd0e1c726101a3fb6e93422c48.svg",
     "static/media/burgerMenu_open.svg": "/Glanz-Pur/static/media/burgerMenu_open.532b60470a03194e3b453ea1317b33e6.svg",
-    "main.95cdfdbe.css.map": "/Glanz-Pur/static/css/main.95cdfdbe.css.map",
-    "main.4ba4e68d.js.map": "/Glanz-Pur/static/js/main.4ba4e68d.js.map"
+    "main.713e351b.css.map": "/Glanz-Pur/static/css/main.713e351b.css.map",
+    "main.bd722189.js.map": "/Glanz-Pur/static/js/main.bd722189.js.map"
   },
   "entrypoints": [
-    "static/css/main.95cdfdbe.css",
-    "static/js/main.4ba4e68d.js"
+    "static/css/main.713e351b.css",
+    "static/js/main.bd722189.js"
   ]
 }
