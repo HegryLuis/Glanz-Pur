@@ -103,9 +103,3 @@
     width: 100%;
   }
 }
-
-@media (max-width: 425px) {
-  .btn_box {
-    width: 90%;
-  }
-}
