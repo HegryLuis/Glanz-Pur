@@ -91,6 +91,7 @@
   flex-direction: column;
   gap: 10px;
   width: 60%;
+  max-width: 300px;
 }
 
 .controls .btn {
@@ -184,7 +185,6 @@
 
   .controls {
     margin-left: 20px;
-    max-width: 300px;
   }
 
   .slider-wrap {
