@@ -14,6 +14,8 @@ import LogoWrapper from "../../components/logoWrapper/LogoWrapper";
 import ReinigungBlock from "../../components/reinigungBlock/ReinigungBlock";
 import Calculator from "../../components/calculator/Calculator";
 import ServiceBlockV2 from "../../components/serviceBlockV2/ServiceBlockV2";
+import Footer from "../../components/Footer/Footer";
+import Header from "../../components/header/Header";
 
 const cardsInfo = [
   {
@@ -83,80 +85,87 @@ const UmzugPage = () => {
   };
 
   return (
-    <div className="container">
-      <div className="wrap">
-        <div className="header">
-          <div className="header-title-block">
-            <span className="blue-text sub-header-title">
-              Genießen Sie eine frische und hygienische Umgebung – wir
-              übernehmen die Arbeit für Sie!
-            </span>
-            <h2 className="blue-text header-title">Umzug</h2>
-            <div className="btns-wrap">
-              <button className="btn" onClick={handleClick}>
-                Jetzt bestellen
-              </button>
-              <div className="btn-wrap" onClick={handleBackClick}>
-                <img alt="back" src={back_logo} />
-                <span>Zurück zu Home</span>
-              </div>
-            </div>
-
-            <div className="contacts">
-              <div className="contact phone">
-                <LogoWrapper logo={phone_logo} />
-                <span>+41 79 123 45 67</span>
-              </div>
-
-              <div className=" contact email">
-                <LogoWrapper logo={mail_logo} />
-                <span>PremReno@gmail.com</span>
-              </div>
-            </div>
-          </div>
-          <img alt="main-illustration" src={umzug_1} />
-        </div>
-
-        <div className="content-wrapper">
-          <div className="content-title">
-            <h2 className="blue-text">Unsere Dienstleistungen</h2>
-            <h4 className="blue-text">
-              Hier finden Sie eine detaillierte Beschreibung unserer
-              Reinigungsleistungen
-            </h4>
-          </div>
-
-          <div className="block-wrapper">
-            {cardsInfo.map((card, index) => {
-              const reverse = index % 2 === 1 ? true : false;
-
-              return (
-                <ReinigungBlock key={index} info={card} reverse={reverse} />
-              );
-            })}
-          </div>
-        </div>
-
-        <div className="services-wrap">
-          <div className="services-title blue-text">
-            <h2 className="services-title-h2">Dienstleistungspreise</h2>
-            <h4>Transparente Preise für jede Dienstleistung</h4>
-          </div>
-
-          <div className="services-content">
-            {infoData.map((data, index) => {
-              return <ServiceBlockV2 info={data} key={index} />;
-            })}
-          </div>
-        </div>
-      </div>
-
-      <div className="calculator-wrap">
+    <>
+      <Header page="umzug" />
+      <div className="container">
         <div className="wrap">
-          <Calculator />
+          <div id="Startseite" className="header">
+            <div className="header-title-block">
+              <span className="blue-text sub-header-title">
+                Genießen Sie eine frische und hygienische Umgebung – wir
+                übernehmen die Arbeit für Sie!
+              </span>
+              <h2 className="blue-text header-title">Umzug</h2>
+              <div className="btns-wrap">
+                <button className="btn" onClick={handleClick}>
+                  Jetzt bestellen
+                </button>
+                <div className="btn-wrap" onClick={handleBackClick}>
+                  <img alt="back" src={back_logo} />
+                  <span>Zurück zu Home</span>
+                </div>
+              </div>
+
+              <div className="contacts">
+                <div className="contact phone">
+                  <LogoWrapper logo={phone_logo} />
+                  <span>+41 79 123 45 67</span>
+                </div>
+
+                <div className=" contact email">
+                  <LogoWrapper logo={mail_logo} />
+                  <span>PremReno@gmail.com</span>
+                </div>
+              </div>
+            </div>
+            <img alt="main-illustration" src={umzug_1} />
+          </div>
+
+          <div className="content-wrapper">
+            <div id="Dienstleistungen" className="content-title">
+              <h2 className="blue-text">Unsere Dienstleistungen</h2>
+              <h4 className="blue-text">
+                Hier finden Sie eine detaillierte Beschreibung unserer
+                Reinigungsleistungen
+              </h4>
+            </div>
+
+            <div className="block-wrapper">
+              {cardsInfo.map((card, index) => {
+                const reverse = index % 2 === 1 ? true : false;
+
+                return (
+                  <ReinigungBlock key={index} info={card} reverse={reverse} />
+                );
+              })}
+            </div>
+          </div>
+
+          <div id="Preise" className="services-wrap">
+            <div className="services-title blue-text">
+              <h2 className="services-title-h2">Dienstleistungspreise</h2>
+              <h4>Transparente Preise für jede Dienstleistung</h4>
+            </div>
+
+            <div className="services-content">
+              {infoData.map((data, index) => {
+                return <ServiceBlockV2 info={data} key={index} />;
+              })}
+            </div>
+          </div>
+        </div>
+
+        <div id="Calculator" className="calculator-wrap">
+          <div className="wrap">
+            <Calculator />
+          </div>
         </div>
       </div>
-    </div>
+
+      <div id="Kontakte">
+        <Footer />
+      </div>
+    </>
   );
 };
 

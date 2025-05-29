@@ -4,18 +4,43 @@ import header_logo from "./../images/header_logo.png";
 import burger_open from "./../images/burgerMenu_open.svg";
 import burger_close from "./../images/burgerMenu_close.svg";
 
-const Header = () => {
-  const menuItems = [
+const linksByPage = {
+  main: [
+    "Startseite",
+    "Warum wir",
+    "Dienstleistungen",
+    "Bewertungen",
+    "Kontakte",
+  ],
+  reinigung: [
     "Startseite",
     "Dienstleistungen",
     "Preise",
     "Calculator",
     "Kontakte",
-  ];
+  ],
+  umzug: ["Startseite", "Dienstleistungen", "Preise", "Calculator", "Kontakte"],
+  hausmeister: ["Startseite", "Preise", "Serviceauftrag", "Kontakte"],
+};
+
+const Header = ({ page }) => {
   const [activeIndex, setActiveIndex] = useState(0);
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
   const toggleMenu = () => setIsMenuOpen((prev) => !prev);
+
+  const menuItems = linksByPage[page] || [];
+
+  const handleMenuItemClick = (item, index) => {
+    setActiveIndex(index);
+    setIsMenuOpen(false);
+
+    const id = item;
+    const element = document.getElementById(id);
+    if (element) {
+      element.scrollIntoView({ behavior: "smooth" });
+    }
+  };
 
   return (
     <header>
@@ -42,14 +67,10 @@ const Header = () => {
                   className={`menu-item ${
                     activeIndex === index ? "active" : ""
                   }`}
-                  onClick={() => {
-                    setActiveIndex(index);
-                    setIsMenuOpen(false);
-                  }}
+                  onClick={() => handleMenuItemClick(item, index)}
                 >
                   <span className="blue-text">{item}</span>
                   <div className={`dot ${isActive ? "visible" : ""}`} />
-                  {/* {activeIndex === index && <div className="dot" />} */}
                 </li>
               );
             })}

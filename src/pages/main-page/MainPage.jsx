@@ -14,6 +14,8 @@ import slider_img_3 from "./../../components/images/slider_img_3.png";
 import Slider from "../../components/slider/Slider";
 import comment_avatar from "./../../components/images/comment_avatar.png";
 import CommentSlider from "../../components/commentSlider/CommentSlider";
+import Header from "../../components/header/Header";
+import Footer from "../../components/Footer/Footer";
 
 const MainPage = () => {
   const handleClick = () => {
@@ -44,18 +46,20 @@ const MainPage = () => {
       img: slider_img_1,
       title: "Reinigung",
       text: `Wir bieten professionelle Reinigungsdienste für Ihr Zuhause mit hochwertiger Ausrüstung und effektiven Reinigungsmitteln. Die Standardreinigung umfasst Staubwischen, Bodenwischen, Reinigung von Möbeln, Sanitäranlagen und Küchenoberflächen.\n\nZusätzliche Leistungen wie Teppichreinigung, Polstermöbelreinigung und Fleckenentfernung können auf Wunsch gegen einen kleinen Aufpreis hinzugefügt werden.\n\nUnser Team garantiert schnelle und gründliche Arbeit, um Ihr Zuhause sauber und gemütlich zu hinterlassen. Unsere Preise sind im Vergleich zu Wettbewerbern günstig und bieten Ihnen ein ausgezeichnetes Preis-Leistungs-Verhältnis.`,
+      navigate: "/Glanz-Pur/reinigung",
     },
 
     {
       img: slider_img_2,
       title: "Umzug",
-
       text: "Ein Umzug kann viel Zeit und Energie kosten – wir machen es Ihnen so einfach wie möglich. Unser Service bietet Ihnen professionelle Unterstützung, damit Sie sich keine Sorgen um den Transport oder die Reinigung machen müssen. \n\nWir übernehmen den sicheren und zuverlässigen Transport Ihrer Möbel, Kartons und Haushaltsgegenstände und sorgen dafür, dass alles unbeschadet an Ihrem neuen Wohnort ankommt. Zusätzlich kümmern wir uns um eine gründliche Reinigung Ihrer alten oder neuen Wohnung, damit Sie den Umzug stressfrei abschließen können. \n\nOb Sie nur den Transport, nur die Reinigung oder beides als Komplettpaket buchen möchten – wir passen uns Ihren individuellen Bedürfnissen an. Unser Team arbeitet effizient, sorgfältig und zuverlässig, damit Ihr Umzug reibungslos und entspannt verläuft.",
+      navigate: "/Glanz-Pur/umzug",
     },
     {
       img: slider_img_3,
       title: "Alltagshelfer",
       text: "Kleine Reparaturen im Haushalt können schnell zur Herausforderung werden – wir sind für Sie da. Unser Alltagshelfer-Service bietet Ihnen professionelle Unterstützung bei handwerklichen Arbeiten, damit Ihr Zuhause immer in einwandfreiem Zustand bleibt. \n\nOb tropfender Wasserhahn, defekte Steckdose oder Möbelmontage – unsere erfahrenen Handwerker kümmern sich zuverlässig und schnell um alle anfallenden Reparaturen. Mit Fachwissen und dem richtigen Werkzeug lösen wir kleine und größere Probleme effizient und sauber. \n\nSie entscheiden, welche Hilfe Sie benötigen. Buchen Sie unseren Service flexibel nach Ihrem Bedarf und genießen Sie die Sicherheit, dass Ihr Zuhause in den besten Händen ist.",
+      navigate: "/Glanz-Pur/hausmeisterservice",
     },
   ];
 
@@ -82,8 +86,9 @@ const MainPage = () => {
 
   return (
     <>
+      <Header page="main" />
       <div className="container">
-        <div className="wrap">
+        <div id="Startseite" className="wrap">
           <div id="main-header" className="main-header">
             <div className="main-title-block">
               <span className="blue-text main-text">
@@ -111,7 +116,9 @@ const MainPage = () => {
           </div>
 
           <div className="main-content">
-            <h2 className="blue-text">Warum wir</h2>
+            <h2 className="blue-text" id="Warum wir">
+              Warum wir
+            </h2>
             <div className="content-wrap">
               {infoData.map((data, index) => {
                 return (
@@ -128,17 +135,23 @@ const MainPage = () => {
           </div>
 
           <div className="slider-content">
-            <h2 className="blue-text">Dienstleistungen</h2>
+            <h2 className="blue-text" id="Dienstleistungen">
+              Dienstleistungen
+            </h2>
 
             <Slider data={sliderData} />
           </div>
 
-          <div className="comment-content">
+          <div id="Bewertungen" className="comment-content">
             <h2 className="blue-text">Was die Leute über uns sagen</h2>
 
             <CommentSlider commentData={commentData} />
           </div>
         </div>
+      </div>
+
+      <div id="Kontakte">
+        <Footer />
       </div>
     </>
   );

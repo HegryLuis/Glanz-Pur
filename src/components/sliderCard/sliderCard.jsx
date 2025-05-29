@@ -16,7 +16,10 @@ const SliderCard = ({ item, onClick }) => {
         <h4 className={styles.slider_card_title}>{item.title}</h4>
       </div>
 
-      <button className={`btn ${styles.btn_slider}`} onClick={onClick}>
+      <button
+        className={`btn ${styles.btn_slider}`}
+        onClick={() => onClick(item.navigate)}
+      >
         Jetzt bestellen
       </button>
     </div>

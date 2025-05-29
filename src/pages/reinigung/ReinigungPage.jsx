@@ -29,6 +29,8 @@ import ReinigungBlock from "../../components/reinigungBlock/ReinigungBlock";
 import ServiceBlock from "../../components/serviceBlock/ServiceBlock";
 import Calculator from "../../components/calculator/Calculator";
 import ServiceBlockV2 from "../../components/serviceBlockV2/ServiceBlockV2";
+import Footer from "../../components/Footer/Footer";
+import Header from "../../components/header/Header";
 
 const cardsInfo = [
   {
@@ -254,10 +256,12 @@ const ReinigungPage = () => {
 
   return (
     <>
+      <Header page="reinigung" />
+
       <div className="container">
         <div className="wrap">
           <div className="header">
-            <div className="header-title-block">
+            <div id="Startseite" className="header-title-block">
               <span className="blue-text sub-header-title">
                 Professionelle Reinigung für Ihr Zuhause und Büro. Schnell und
                 zuverlässig.
@@ -289,7 +293,7 @@ const ReinigungPage = () => {
           </div>
 
           <div className="content-wrapper">
-            <div className="content-title">
+            <div id="Dienstleistungen" className="content-title">
               <h2 className="blue-text">Unsere Dienstleistungen</h2>
               <h4 className="blue-text">
                 Hier finden Sie eine detaillierte Beschreibung unserer
@@ -309,7 +313,7 @@ const ReinigungPage = () => {
           </div>
 
           <div className="services-wrap">
-            <div className="services-title blue-text">
+            <div id="Preise" className="services-title blue-text">
               <h2>Preise für Dienstleistungen</h2>
               <h4>Transparente Preise für jede Dienstleistung</h4>
             </div>
@@ -338,11 +342,15 @@ const ReinigungPage = () => {
           </div>
         </div>
 
-        <div className="calculator-wrap">
+        <div id="Calculator" className="calculator-wrap">
           <div className="wrap">
             <Calculator />
           </div>
         </div>
+      </div>
+
+      <div id="Kontakte">
+        <Footer />
       </div>
     </>
   );

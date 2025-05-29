@@ -3,15 +3,16 @@ import "./Slider.css";
 import arrow_left from "./../images/arrow_left.svg";
 import arrow_right from "./../images/arrow_right.svg";
 import SliderCard from "../sliderCard/sliderCard";
+import { useNavigate } from "react-router-dom";
 
 const Slider = ({ data }) => {
   const [currentIndex, setCurrentIndex] = useState(0);
   const [animation, setAnimation] = useState("");
   const [isMobile, setIsMobile] = useState(window.innerWidth <= 1024);
+  const navigate = useNavigate();
 
-  const handleClick = () => {
-    const element = document.getElementById("calculator-title-wrap");
-    if (element) element.scrollIntoView({ behavior: "smooth" });
+  const handleNavigate = (path) => {
+    navigate(path);
   };
 
   useEffect(() => {
@@ -53,7 +54,9 @@ const Slider = ({ data }) => {
     return (
       <div className="slider-wrap-mobile">
         {data.map((item, index) => {
-          return <SliderCard key={index} item={item} onClick={handleClick} />;
+          return (
+            <SliderCard key={index} item={item} onClick={handleNavigate} />
+          );
         })}
       </div>
     );
@@ -126,7 +129,10 @@ const Slider = ({ data }) => {
                 <img alt="next" src={arrow_right} />
               </div>
             </div>
-            <button className="btn" onClick={handleClick}>
+            <button
+              className="btn"
+              onClick={() => handleNavigate(data[currentIndex].navigate)}
+            >
               Jetzt bestellen
             </button>
           </div>

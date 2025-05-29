@@ -24,6 +24,8 @@ import "./HausmeisterservicePage.css";
 import LogoWrapper from "../../components/logoWrapper/LogoWrapper";
 import ServiceBlockV2 from "../../components/serviceBlockV2/ServiceBlockV2";
 import ContactsBlock from "../../components/contactsBlock/ContactsBlock";
+import Footer from "../../components/Footer/Footer";
+import Header from "../../components/header/Header";
 
 const servicesInfo = [
   {
@@ -177,61 +179,70 @@ const HausmeisterservicePage = () => {
     if (element) element.scrollIntoView({ behavior: "smooth" });
   };
   return (
-    <div>
-      <div className="container">
-        <div className="wrap">
-          <div className="header">
-            <div className="header-title-block">
-              <span className="blue-text sub-header-title">
-                Wir machen Ihr Zuhause wieder funktionstüchtig
-              </span>
-              <h2 className="blue-text header-title header-title-haus">
-                Alles läuft
-              </h2>
-              <div className="btns-wrap">
-                <button className="btn" onClick={handleClick}>
-                  Jetzt bestellen
-                </button>
-                <div className="btn-wrap" onClick={handleBackClick}>
-                  <img alt="back" src={back_logo} />
-                  <span>Zurück zu Home</span>
+    <>
+      <Header page="hausmeister" />
+      <div>
+        <div className="container">
+          <div className="wrap">
+            <div id="Startseite" className="header">
+              <div className="header-title-block">
+                <span className="blue-text sub-header-title">
+                  Wir machen Ihr Zuhause wieder funktionstüchtig
+                </span>
+                <h2 className="blue-text header-title header-title-haus">
+                  Alles läuft
+                </h2>
+                <div className="btns-wrap">
+                  <button className="btn" onClick={handleClick}>
+                    Jetzt bestellen
+                  </button>
+                  <div className="btn-wrap" onClick={handleBackClick}>
+                    <img alt="back" src={back_logo} />
+                    <span>Zurück zu Home</span>
+                  </div>
+                </div>
+
+                <div className="contacts">
+                  <div className="contact phone">
+                    <LogoWrapper logo={phone_logo} />
+                    <span>+41 79 123 45 67</span>
+                  </div>
+
+                  <div className=" contact email">
+                    <LogoWrapper logo={mail_logo} />
+                    <span>PremReno@gmail.com</span>
+                  </div>
                 </div>
               </div>
+              <img alt="main-illustration" src={Hausmeisterservice_1} />
+            </div>
 
-              <div className="contacts">
-                <div className="contact phone">
-                  <LogoWrapper logo={phone_logo} />
-                  <span>+41 79 123 45 67</span>
-                </div>
+            <div className="content-wrapper">
+              <div id="Preise" className="content-title">
+                <h2 className="blue-text">Preise für Dienstleistungen</h2>
+                <h4 className="blue-text">
+                  Transparente Preise für jede Dienstleistung
+                </h4>
+              </div>
 
-                <div className=" contact email">
-                  <LogoWrapper logo={mail_logo} />
-                  <span>PremReno@gmail.com</span>
-                </div>
+              <div className="hausmeister-block-wrapper">
+                {servicesInfo.map((service, index) => {
+                  return <ServiceBlockV2 key={index} info={service} />;
+                })}
               </div>
             </div>
-            <img alt="main-illustration" src={Hausmeisterservice_1} />
-          </div>
 
-          <div className="content-wrapper">
-            <div className="content-title">
-              <h2 className="blue-text">Preise für Dienstleistungen</h2>
-              <h4 className="blue-text">
-                Transparente Preise für jede Dienstleistung
-              </h4>
-            </div>
-
-            <div className="hausmeister-block-wrapper">
-              {servicesInfo.map((service, index) => {
-                return <ServiceBlockV2 key={index} info={service} />;
-              })}
+            <div id="Serviceauftrag">
+              <ContactsBlock />
             </div>
           </div>
-
-          <ContactsBlock />
         </div>
       </div>
-    </div>
+
+      <div id="Kontakte">
+        <Footer />
+      </div>
+    </>
   );
 };
 
