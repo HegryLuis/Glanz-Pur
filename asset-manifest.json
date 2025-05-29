@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/Glanz-Pur/static/css/main.a40a5813.css",
-    "main.js": "/Glanz-Pur/static/js/main.61d3f99c.js",
+    "main.css": "/Glanz-Pur/static/css/main.c7221ce2.css",
+    "main.js": "/Glanz-Pur/static/js/main.541bc40b.js",
     "static/media/slider_img_3.png": "/Glanz-Pur/static/media/slider_img_3.d1b06ba0deda7dc038b8.png",
     "static/media/slider_img_1.png": "/Glanz-Pur/static/media/slider_img_1.6726a6a1611cc8e30cd9.png",
     "static/media/slider_img_2.png": "/Glanz-Pur/static/media/slider_img_2.ddbc6ab9a4e3d7f15840.png",
@@ -74,11 +74,11 @@
     "static/media/curtains_logo.svg": "/Glanz-Pur/static/media/curtains_logo.0ab388062bac93d5111e02b62347dd64.svg",
     "static/media/burgerMenu_close.svg": "/Glanz-Pur/static/media/burgerMenu_close.b21cf1cd0e1c726101a3fb6e93422c48.svg",
     "static/media/burgerMenu_open.svg": "/Glanz-Pur/static/media/burgerMenu_open.532b60470a03194e3b453ea1317b33e6.svg",
-    "main.a40a5813.css.map": "/Glanz-Pur/static/css/main.a40a5813.css.map",
-    "main.61d3f99c.js.map": "/Glanz-Pur/static/js/main.61d3f99c.js.map"
+    "main.c7221ce2.css.map": "/Glanz-Pur/static/css/main.c7221ce2.css.map",
+    "main.541bc40b.js.map": "/Glanz-Pur/static/js/main.541bc40b.js.map"
   },
   "entrypoints": [
-    "static/css/main.a40a5813.css",
-    "static/js/main.61d3f99c.js"
+    "static/css/main.c7221ce2.css",
+    "static/js/main.541bc40b.js"
   ]
 }
